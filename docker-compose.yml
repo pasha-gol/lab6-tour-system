@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  tour-service:
+    build: ./tour_service
+    ports:
+      - "8018:8000"
+    networks:
+      - lab-network
+
+  booking-service:
+    build: ./booking_service
+    ports:
+      - "9018:8000"
+    depends_on:
+      - tour-service
+    networks:
+      - lab-network
+
+networks:
+  lab-network:
+    driver: bridge

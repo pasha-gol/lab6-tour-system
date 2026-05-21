@@ -1,0 +1,77 @@
+{
+  "info": {
+    "_postman_id": "6a573eef-31cc-4d6e-9b79-950bd1c52ef8",
+    "name": "Lab6 - Туристичний оператор",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "55087898",
+    "_collection_link": "https://go.postman.co/collection/55087898-6a573eef-31cc-4d6e-9b79-950bd1c52ef8?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Get All Tours",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8018/tours",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8018",
+          "path": [
+            "tours"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Booking",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"tour_id\": 1801,\r\n  \"customer_name\": \"Голубчак Павло\",\r\n  \"people_count\": 2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:9018/bookings",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9018",
+          "path": [
+            "bookings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Bookings",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:9018/bookings",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "9018",
+          "path": [
+            "bookings"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
